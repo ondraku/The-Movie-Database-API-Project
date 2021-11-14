@@ -1,7 +1,11 @@
 package com.greenfoxacademy.moviedatabaseapi.controller;
 
+import com.greenfoxacademy.moviedatabaseapi.model.Company;
+import com.greenfoxacademy.moviedatabaseapi.model.dto.CompanyDto;
 import com.greenfoxacademy.moviedatabaseapi.service.CompanyService;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,5 +20,10 @@ public class CompanyController {
 
     public CompanyController(CompanyService companyService) {
         this.companyService = companyService;
+    }
+
+    @GetMapping("/company/{companyId}")
+    public CompanyDto getCompanies(@PathVariable Long companyId) {
+        return companyService.getCompanies(companyId, apiKey);
     }
 }
