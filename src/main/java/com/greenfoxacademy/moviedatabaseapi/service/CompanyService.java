@@ -1,15 +1,14 @@
 package com.greenfoxacademy.moviedatabaseapi.service;
 
 
-import com.greenfoxacademy.moviedatabaseapi.model.Company;
-import com.greenfoxacademy.moviedatabaseapi.model.dto.CompanyDto;
+import com.greenfoxacademy.moviedatabaseapi.entity.Company;
+import com.greenfoxacademy.moviedatabaseapi.model.CompanyDTO;
 import org.springframework.stereotype.Service;
 
 @Service
 public interface CompanyService {
-    CompanyDto getCompanies(Long id, String apiKey);
-
-    CompanyDto mapToDto(Company company);
-
-    Company mapToEntity(CompanyDto companyDto);
+    CompanyDTO getCompanies(Long id, String apiKey);
+    CompanyDTO mapToDto(Company company);
+    Company mapToEntity(CompanyDTO companyDto);
+    Company addCompany(Company company);
 }
