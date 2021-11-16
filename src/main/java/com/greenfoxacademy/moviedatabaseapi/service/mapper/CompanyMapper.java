@@ -8,5 +8,5 @@ import org.mapstruct.Mapper;
 @Mapper
 public interface CompanyMapper {
     CompanyDTO entityToDTO(Company company);
-    Company DTOtoEntityToCompany(CompanyDTO company);
+    Company DTOtoEntity(CompanyDTO company);
 }

@@ -26,6 +26,4 @@ public class Company {
     private String logo_path;
     private String name;
     private String origin_country;
-    private String parent_company;
-
 }

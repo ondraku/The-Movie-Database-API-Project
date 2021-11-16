@@ -15,5 +15,4 @@ public class CompanyDTO {
     private String logo_path;
     private String name;
     private String origin_country;
-    private Object parent_company; // TODO: Specific Object
 }

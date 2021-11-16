@@ -8,7 +8,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface CompanyService {
     CompanyDTO getCompanies(Long id, String apiKey);
-    CompanyDTO mapToDto(Company company);
-    Company mapToEntity(CompanyDTO companyDto);
     Company addCompany(Company company);
 }
